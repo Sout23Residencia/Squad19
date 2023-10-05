@@ -15,8 +15,8 @@ O objetivo é construir uma api
 
 ## Configuração :gear: 
 
-###Dependencias:
 "dependencies": {
+
         "docx": "^8.2.3",
         "express": "^4.18.2",
         "firebase-admin": "^11.8.0",
