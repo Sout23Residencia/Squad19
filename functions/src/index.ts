@@ -1,23 +1,29 @@
 import * as functions from 'firebase-functions';
 import * as express from 'express';
 import { db } from './config/firebase';
+import { doc, runTransaction } from 'firebase/firestore';
 
 const app = express();
 
-app.get('/api/:id', (req, res) => {
-  const docRef = db.collection('Pacientes').doc(req.params.id);
-
-  docRef.get()
-  .then((doc) => {
-    if (doc.exists) {
-      const data = doc.data();
-      console.log(data);
-    } else {
-      console.log('Documento não encontrado');
+app.get("/:id", async(req,res) => {
+  const newDocRef = doc(db, "Pacientes", req.params.id);
+  try {
+      await runTransaction(db, async (transaction) => {
+        const sfDoc = await transaction.get(newDocRef);
+        if (!sfDoc.exists()) {
+          throw "Documento não existe!";
+          
+          }
+        else{
+          return res.send("aaaa" + {data : sfDoc.data});
+          }
+      });
+      console.log("Transação Completa!");
+    } catch (e) {
+      console.log("Transação falhou: ", e);
     }
-  })
-  .catch((error) => {
-    console.log('Erro ao obter documento:', error);
-  });
+
+  return res.send("finalizado o get com sucesso ")
 });
+
 exports.app = functions.https.onRequest(app);

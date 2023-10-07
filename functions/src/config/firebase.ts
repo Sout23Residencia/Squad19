@@ -1,14 +1,16 @@
-import * as admin from 'firebase-admin'
-import * as functions from 'firebase-functions'
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
-admin.initializeApp({
-  credential: admin.credential.cert({
-    privateKey: functions.config().private.key.replace(/\\n/g, '\n'),
-    projectId: functions.config().project.id,
-    clientEmail: functions.config().client.email
-  }),
-  databaseURL: 'https://residenciaiii.firebaseio.com'
-})
+const firebaseConfig = {
+    apiKey: "AIzaSyBi6FZEtWHpyvz1KKDznKkHVFf-oW1Yypw",
+    authDomain: "residenciaiii.firebaseapp.com",
+    projectId: "residenciaiii",
+    storageBucket: "residenciaiii.appspot.com",
+    messagingSenderId: "386156246512",
+    appId: "1:386156246512:web:c7f3ab0e2ebb35ba221935",
+    measurementId: "G-FQ951DDYN6"
+  };
+  
+const app = initializeApp(firebaseConfig);
 
-const db = admin.firestore()
-export { db }
+export const db = getFirestore(app);
