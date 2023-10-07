@@ -7,23 +7,22 @@ const app = express();
 
 app.get("/:id", async(req,res) => {
   const newDocRef = doc(db, "Pacientes", req.params.id);
+  let data
   try {
       await runTransaction(db, async (transaction) => {
         const sfDoc = await transaction.get(newDocRef);
         if (!sfDoc.exists()) {
-          throw "Documento não existe!";
-          
+            return res.status(404).send("Documento Não Encontrado")          
           }
         else{
-          return res.send("aaaa" + {data : sfDoc.data});
+            data = sfDoc.data()
+            return res.status(200).send({data : data});
           }
       });
-      console.log("Transação Completa!");
-    } catch (e) {
-      console.log("Transação falhou: ", e);
+    } catch (error) {
+      return res.status(500).send("Mensagem de Erro: " + error)
     }
-
-  return res.send("finalizado o get com sucesso ")
+    return res.send("Finalizado o GET com error indefinido");
 });
 
 exports.app = functions.https.onRequest(app);
