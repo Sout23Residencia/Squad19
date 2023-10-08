@@ -1,5 +1,5 @@
-import { Document, Paragraph, Table, TableRow, TableCell, Packer} from "docx";
-import * as fs from "fs";
+import { Document, Paragraph, Table, TableRow, TableCell} from "docx";
+// import * as fs from "fs";
 import { DocumentData } from "firebase-admin/firestore";
 
 export function Documento(objectDate : DocumentData){
@@ -39,9 +39,10 @@ export function Documento(objectDate : DocumentData){
             },
         ],
     });
-    Packer.toBuffer(doc).then((buffer) => {
-        fs.writeFileSync("testdocument.docx", buffer);
-    });
+    return doc;
+    // Packer.toBuffer(doc).then((buffer) => {
+    //     fs.writeFileSync("testdocument.docx", buffer);
+    // });
 }
 
 
