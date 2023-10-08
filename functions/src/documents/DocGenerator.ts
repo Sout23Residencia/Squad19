@@ -47,9 +47,8 @@ const doc = new Document({
 });
 
 
-// Used to export the file into a .docx file
+
 Packer.toBuffer(doc).then((buffer) => {
-    fs.writeFileSync("My Document.docx", buffer);
+    fs.writeFileSync("testdocument.docx", buffer);
 });
 
-0
