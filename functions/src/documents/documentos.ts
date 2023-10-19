@@ -1,9 +1,10 @@
 import { Document, Paragraph, Table, TableRow, TableCell} from "docx";
 import { DocumentData } from "firebase-admin/firestore";
 
+
 export function Documento(objectDate : DocumentData) : Document{
     let paragraph 
-
+    
     if (objectDate["Status"] == "Morta") {
         paragraph = [new Paragraph("Ceifada por: " + objectDate["Ceifada por"])]
     } else {
@@ -38,7 +39,8 @@ export function Documento(objectDate : DocumentData) : Document{
             },
         ],
     });
-    return doc
+
+    return doc;
 }
 
 
