@@ -5,6 +5,7 @@ import { doc, runTransaction } from 'firebase/firestore';
 import { Documento } from './documents/doc';
 
 
+
 const app = express();
 
 app.get("", async(req,res) => {
@@ -17,7 +18,7 @@ app.get("", async(req,res) => {
           }
         else{
           const data = sfDoc.data();
-          Documento(data);
+          Documento(data)
           return res.status(200).send(data);
         }
       });

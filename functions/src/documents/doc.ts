@@ -1,9 +1,9 @@
-import { Document, Paragraph, Table, TableRow, TableCell, Packer} from "docx";
-import * as fs from "fs"
+import { Document, Paragraph, Table, TableRow, TableCell, Packer } from "docx";
+import * as fs from "fs";
 import { DocumentData } from "firebase-admin/firestore";
 
-export function Documento(objectDate : DocumentData){
 
+export function Documento(objectDate: DocumentData) {
     const doc = new Document({
         sections: [
             {
@@ -15,7 +15,7 @@ export function Documento(objectDate : DocumentData){
                                 children: [
                                     new TableCell({
                                         children: [new Paragraph("Nome: " + objectDate["name"])],
-                                    }),
+                                    }),                              
                                 ],
                             }),
                         ],
@@ -24,7 +24,8 @@ export function Documento(objectDate : DocumentData){
             },
         ],
     });
-    Packer.toBuffer(doc).then((buffer) => {
-         fs.writeFileSync("testdocument.docx", buffer);
-    });
+    
+        Packer.toBuffer(doc).then((buffer) => {
+            fs.writeFileSync(".\\testdocument.docx", buffer);
+        })
 }
