@@ -1,10 +1,8 @@
 import * as functions from 'firebase-functions';
 import * as express from 'express';
 import { db } from './config/firebase';
-import { doc, runTransaction } from 'firebase/firestore';
+import { doc, runTransaction, collection, getDocs } from 'firebase/firestore'; 
 import { Documento } from './documents/doc';
-
-
 
 const app = express();
 
@@ -18,6 +16,10 @@ app.get("", async(req,res) => {
           }
         else{
           const data = sfDoc.data();
+          const programsRef = collection(db, "students", data.id, "programs"); 
+          const programsSnap = await getDocs(programsRef);
+          const programsData = programsSnap.docs.map(doc => doc.data());
+          data.program = programsData;
           Documento(data)
           return res.status(200).send(data);
         }
