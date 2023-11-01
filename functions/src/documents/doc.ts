@@ -1,8 +1,6 @@
 import { Document, Packer, Paragraph, Table, TableCell, TableRow, TextRun } from 'docx';
-import * as fs from "fs";
-import { DocumentData } from "firebase-admin/firestore";
 
-export function Documento(objectDate: DocumentData) {
+export function createDocumento(objectDate: any) {
     const programData = objectDate.program;
 
     let children = [
@@ -38,7 +36,7 @@ export function Documento(objectDate: DocumentData) {
                                 children: [new Paragraph("Nome do Programa: " + programItem.name)],
                             }),
                             new TableCell({
-                                children: [new Paragraph("Area: " + programItem.area)], 
+                                children: [new Paragraph("Area: " + programItem.area)],
                             }),
                         ]
                     })
@@ -60,7 +58,5 @@ export function Documento(objectDate: DocumentData) {
         }]
     });
 
-    Packer.toBuffer(doc).then((buffer) => {
-        fs.writeFileSync(".\\testdocument.docx", buffer);
-    });
+    return Packer.toBuffer(doc);
 }
