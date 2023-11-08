@@ -8,6 +8,6 @@ Esta API foi desenvolvida sob medida para a Startup Bhave, com o objetivo de fac
 Se você gostou do nosso Projeto, nos dê uma Estrela para que o projeto continue firme e forte! ;)
 
 <p align="center">
-  <img src="https://github.com/Sout23Residencia/Squad19/assets/100872126/24088644-ded6-42c7-ab9b-b04cf1e98116" width="300" heigh="500" alt="Screenshot">
+  <img src="https://github.com/Sout23Residencia/Squad19/assets/100872126/24088644-ded6-42c7-ab9b-b04cf1e98116" width="500" heigh="700" alt="Screenshot">
 </p>
 
