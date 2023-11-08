@@ -8,5 +8,6 @@ Esta API foi desenvolvida sob medida para a Startup Bhave, com o objetivo de fac
 Se você gostou do nosso Projeto, nos dê uma Estrela para que o projeto continue firme e forte! ;)
 
 <p align="center">
-   ![Imagem do WhatsApp de 2023-11-05 à(s) 17 35 47_44935e22](https://github.com/Sout23Residencia/Squad19/assets/100872126/9a8064d6-208c-4a49-8794-8645cfe25d6a)
+  <img src="https://github.com/Sout23Residencia/Squad19/assets/100872126/24088644-ded6-42c7-ab9b-b04cf1e98116" width="300" heigh="500" alt="Screenshot">
 </p>
+
