@@ -13,16 +13,16 @@ Se você gostou do nosso Projeto, nos dê uma Estrela para que o projeto continu
 
 ## Tecnologias:
     
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Firebase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebaseopensource.com/projects/firebase/firebase-tools/)
-[![Express](https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
-
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) <br>
+- O TypeScript (TS) é uma linguagem de programação que é uma extensão do JavaScript, projetada para adicionar tipagem estática opcional e outras funcionalidades avançadas ao JavaScript. Ele fornece segurança e clareza ao código, identificando erros em tempo de compilação e melhorando a produtividade no desenvolvimento de aplicativos. <br> <br>
+[![Firebase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebaseopensource.com/projects/firebase/firebase-tools/) <br>
+- Firebase é uma plataforma de desenvolvimento de aplicativos da Google que oferece serviços de banco de dados em tempo real, autenticação de usuários, hospedagem de sites e muito mais.  <br> <br>
+[![Express](https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/) <br>
+- Express.js é um framework para construir aplicativos web com Node.js. <br> <br>
+[![Node.js](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://www.typescriptlang.org/) <br>
+- O Node.js é uma plataforma que permite a execução de código JavaScript no servidor. <br> <br>
 ## Dependências
 
-  
-- Hosting
-    - IIS
-    - NGINX
-    - Docker (with compose)
+
 
 
