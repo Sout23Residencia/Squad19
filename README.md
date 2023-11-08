@@ -11,3 +11,18 @@ Se você gostou do nosso Projeto, nos dê uma Estrela para que o projeto continu
   <img src="https://github.com/Sout23Residencia/Squad19/assets/100872126/24088644-ded6-42c7-ab9b-b04cf1e98116" width="500" heigh="700" alt="Screenshot">
 </p>
 
+## Tecnologias:
+    
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Firebase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebaseopensource.com/projects/firebase/firebase-tools/)
+[![Express](https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+
+## Dependências
+
+  
+- Hosting
+    - IIS
+    - NGINX
+    - Docker (with compose)
+
+
