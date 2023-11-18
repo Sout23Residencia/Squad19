@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "docx": "^8.2.3",
-    "express": "^4.18.2",
-    "file-saver": "^2.0.5",
-    "firebase": "^10.4.0"
-  }
-}
