@@ -6,8 +6,8 @@ import { createDocumento } from './documents/doc';
 
 const app = express();
 
-app.get("", async (req, res) => {
- const studentId = "DgJIrV6takwXdE5XLqeC";
+app.get(":id", async (req, res) => {
+ const studentId = req.params.id;
  const studentRef = doc(db, "students", studentId);
  let objectDate
  try {
