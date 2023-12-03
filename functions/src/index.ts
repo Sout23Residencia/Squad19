@@ -6,9 +6,10 @@ import { createDocumento } from './documents/doc';
 
 const app = express();
 
-app.get(":id", async (req, res) => {
- const studentId = req.params.id;
- const studentRef = doc(db, "students", studentId);
+app.get("", async (req, res) => {
+  const dadosData : any = req.body
+  const studentRef = doc(db, "students", dadosData.id);
+  console.log(dadosData.id)
  let objectDate
  try {
     await runTransaction(db, async (transaction) => {
@@ -16,8 +17,6 @@ app.get(":id", async (req, res) => {
         if (!studentDoc.exists()) {
             return res.status(404).send("Documento Não Encontrado");
         } else {
-            
-            const dadosData : any = req.body
 
             const studentData = studentDoc.data();
             const attendancesRef = collection(studentRef, "attendances");
